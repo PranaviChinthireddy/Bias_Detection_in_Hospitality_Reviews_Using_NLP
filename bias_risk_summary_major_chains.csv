@@ -1,0 +1,105 @@
+hotel_chain,city,risk_category,count
+best western,New Orleans,High,7
+best western,New Orleans,Low,223
+best western,New Orleans,Medium,26
+crowne plaza,Indianapolis,High,9
+crowne plaza,Indianapolis,Low,196
+crowne plaza,Indianapolis,Medium,32
+crowne plaza,New Orleans,High,27
+crowne plaza,New Orleans,Low,639
+crowne plaza,New Orleans,Medium,79
+hilton,Indianapolis,High,12
+hilton,Indianapolis,Low,314
+hilton,Indianapolis,Medium,32
+hilton,Nashville,High,29
+hilton,Nashville,Low,397
+hilton,Nashville,Medium,46
+hilton,New Orleans,High,38
+hilton,New Orleans,Low,638
+hilton,New Orleans,Medium,105
+hilton,Philadelphia,High,50
+hilton,Philadelphia,Low,769
+hilton,Philadelphia,Medium,91
+hilton,Tampa,High,17
+hilton,Tampa,Low,337
+hilton,Tampa,Medium,37
+hilton,Tucson,High,9
+hilton,Tucson,Low,248
+hilton,Tucson,Medium,22
+holiday inn,Indianapolis,High,1
+holiday inn,Indianapolis,Low,10
+holiday inn,Indianapolis,Medium,1
+holiday inn,Nashville,High,12
+holiday inn,Nashville,Low,177
+holiday inn,Nashville,Medium,22
+holiday inn,New Orleans,High,8
+holiday inn,New Orleans,Low,314
+holiday inn,New Orleans,Medium,39
+holiday inn,Philadelphia,High,7
+holiday inn,Philadelphia,Low,147
+holiday inn,Philadelphia,Medium,20
+holiday inn,Tampa,High,8
+holiday inn,Tampa,Low,101
+holiday inn,Tampa,Medium,21
+holiday inn,Tucson,High,7
+holiday inn,Tucson,Low,70
+holiday inn,Tucson,Medium,9
+hyatt,Nashville,Low,225
+hyatt,Nashville,Medium,19
+hyatt,New Orleans,High,22
+hyatt,New Orleans,Low,555
+hyatt,New Orleans,Medium,72
+hyatt,Tampa,High,1
+hyatt,Tampa,Low,64
+hyatt,Tampa,Medium,6
+marriott,Indianapolis,High,10
+marriott,Indianapolis,Low,571
+marriott,Indianapolis,Medium,50
+marriott,Nashville,High,3
+marriott,Nashville,Low,107
+marriott,Nashville,Medium,7
+marriott,New Orleans,High,39
+marriott,New Orleans,Low,1051
+marriott,New Orleans,Medium,131
+marriott,Philadelphia,High,41
+marriott,Philadelphia,Low,699
+marriott,Philadelphia,Medium,108
+marriott,Tampa,High,5
+marriott,Tampa,Low,187
+marriott,Tampa,Medium,17
+marriott,Tucson,High,15
+marriott,Tucson,Low,496
+marriott,Tucson,Medium,34
+sheraton,Indianapolis,High,10
+sheraton,Indianapolis,Low,121
+sheraton,Indianapolis,Medium,15
+sheraton,Nashville,High,5
+sheraton,Nashville,Low,230
+sheraton,Nashville,Medium,25
+sheraton,New Orleans,High,20
+sheraton,New Orleans,Low,579
+sheraton,New Orleans,Medium,89
+sheraton,Philadelphia,High,24
+sheraton,Philadelphia,Low,228
+sheraton,Philadelphia,Medium,27
+sheraton,Tampa,High,4
+sheraton,Tampa,Low,112
+sheraton,Tampa,Medium,12
+sheraton,Tucson,High,4
+sheraton,Tucson,Low,90
+sheraton,Tucson,Medium,14
+westin,Indianapolis,High,5
+westin,Indianapolis,Low,160
+westin,Indianapolis,Medium,23
+westin,Nashville,High,12
+westin,Nashville,Low,188
+westin,Nashville,Medium,27
+westin,New Orleans,High,14
+westin,New Orleans,Low,321
+westin,New Orleans,Medium,37
+westin,Tampa,High,8
+westin,Tampa,Low,133
+westin,Tampa,Medium,10
+westin,Tucson,High,13
+westin,Tucson,Low,388
+westin,Tucson,Medium,44
