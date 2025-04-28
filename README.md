@@ -82,5 +82,5 @@ This project provides a practical framework for detecting bias and unfair treatm
 ## Dataset
 
 - Source: [Yelp Open Dataset](https://business.yelp.com/data/resources/open-dataset/)
-- Cities Analyzed: Philadelphia, Tucson, Tampa, Indianapolis, New Orleans, Edmonton
+- Cities Analyzed: Philadelphia, Tucson, Tampa, Indianapolis, Nashville, New Orleans
 - Hospitality Reviews Processed: \~2.3M
