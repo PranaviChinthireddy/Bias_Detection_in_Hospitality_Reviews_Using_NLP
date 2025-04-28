@@ -1,98 +1,86 @@
 # Bias Detection in Hospitality Reviews Using NLP
 
-## Problem Statement
+# Overview
+This project focuses on detecting potential bias, discrimination, and unfair treatment within hospitality reviews (such as those for hotels, restaurants, and spas) using Natural Language Processing (NLP) techniques. Analyzing customer reviews' sentiment and identifying specific biased or discriminatory terms aims to uncover patterns of unfairness in customer experiences that could impact access, knowledge, or reputation. This project leverages various text analysis techniques, including sentiment analysis, n-gram and TF-IDF analysis, and topic modeling, to detect bias signals and uncover trends across different cities and business types.
 
-Customer reviews are rich with feedback — not just about quality, but also fairness. In the hospitality sector, where interpersonal experiences are central, reviews can reveal systemic patterns of unfair treatment, exclusion, or biased service. This project analyzes hospitality reviews from Yelp to uncover signals of bias, using keyword detection, sentiment scoring, and risk classification.
+# Objective
+The primary goal of this project is to develop a framework that detects signs of bias, unfairness, or systemic issues in hospitality reviews. The task includes:
 
+Identifying biased or discriminatory terms within customer feedback.
 
-## Objective
+Analyzing sentiment to understand the nature of bias in the reviews.
 
-To analyze hospitality reviews and identify potential signs of unfair treatment or biased behavior based on linguistic cues and sentiment mismatches. The focus is on:
+Using text analysis techniques to uncover recurring themes or topics related to bias or unfair treatment.
 
-- Reviews from restaurants, hotels, and spas
-- Specific interest in major hotel chains (e.g., Hilton, Marriott)
-- Fairness indicators in language (e.g., “rude”, “disrespectful”, “ignored”)
+Presenting actionable insights to help improve fairness in the hospitality sector.
 
+# Approach
+# 1. Data Collection and Preprocessing
+The dataset includes Yelp's open-source hospitality reviews. Data from businesses categorized as "hotels," "restaurants," "spas," and others were extracted using keyword-based filtering, focusing on high-volume cities such as Philadelphia, Tucson, Tampa, and others. Reviews were filtered for low-star ratings (1-3 stars) and preprocessed by:
 
-## Process Overview
+- Merging business and review data.
 
-1. **Filtered Yelp’s business data** for hospitality-related categories in selected cities.
-2. **Extracted reviews** for those businesses and flagged texts with fairness-related keywords.
-3. **Scored sentiment polarity** using TextBlob and aligned it with star ratings.
-4. **Tagged reviews with risk levels** based on low ratings and negative language.
-5. **Compared bias signals** across cities, business types, and major hotel chains.
-6. **Visualized insights** through heatmaps, bar plots, and word clouds.
-7. **Prototyped an automation function** for detecting bias risks in real-time review feeds.
-8. **Saved output artifacts** including figures and a CSV of flagged major chain reviews.
+- Removing missing values.
 
+- Normalizing the text for further analysis.
 
-## Key Insights
+# 2. Bias Detection
+A custom list of bias-related keywords was defined, and reviews were flagged based on the occurrence of these keywords combined with sentiment analysis. The keywords were carefully chosen based on research rather than assumptions, ensuring a data-driven approach to bias detection. These keywords included terms related to unfair treatment, such as "rude," "disrespectful," and "unwelcoming."
 
-1. **Systemic Behavior by Type:** Restaurants had the highest count of flagged reviews, but hotels and spas showed higher risk levels due to increased negative sentiment.
+# 3. Text Analysis Techniques
+N-Grams and TF-IDF Analysis: These techniques were used to analyze common phrases and terms in biased reviews. N-grams (bi-grams and tri-grams) helped identify recurring patterns in customer complaints, while TF-IDF identified the most critical terms in the context of biased reviews.
 
-2. **Major Hotel Chain Analysis:** Several prominent hotel brands showed measurable levels of flagged reviews. A separate analysis of flagged reviews within these brands (e.g., Hilton, Hyatt) was conducted and exported.
+Sentiment Analysis: Sentiment polarity scores were computed using TextBlob to classify reviews as positive, neutral, or negative. Negative sentiment reviews were further analyzed for bias indicators.
 
-3. **Geographic Trends:** Bias rate in major hotel chains varies significantly by city, suggesting localized customer service disparities.
+BERTopic: A transformer-based topic modeling approach was employed to uncover hidden topics within reviews. This helped in detecting potential themes related to unfair treatment and systemic bias.
 
-## Sample Visuals
+# 4. Word Cloud for Negative Reviews
+A word cloud was generated to visualize the most frequent terms appearing in negative reviews, particularly those flagged for bias. This helped in identifying key themes in customer complaints related to unfair experiences.
 
-- **Figure 1: Bias Rate by Business Type and Chain** — Visualizes whether flagged reviews are more prevalent in major chains vs. smaller businesses.
-- **Figure 2: Heatmap by Business Type and City** — Reveals concentration of flagged reviews by category and city.
-- **Figure 3: Flagged Reviews by Major Hotel Chain** — Highlights how often reviews were flagged for bias within individual hotel brands.
+# 5. Visualizations and Insights
+Multiple visualizations were created to provide insights into bias distribution across various business types and cities. Some key visualizations include:
 
+Bias Rate Comparison: Comparing the bias rate between major hotel chains and other businesses.
 
-## Bonus: Automation Function
+City-wise Bias Rate: Analyzing the bias rate for major hotel chains across different cities.
 
-A review detection function was created to:
+Bias Rate by Business Type: A heatmap showing the business type and city bias rate.
 
-- Identify fairness-related keywords
-- Score sentiment
-- Tag reviews with "high", "medium", or "low" risk levels
+Flagged Reviews per Major Hotel Chain: A bar plot showing the number of flagged reviews per major hotel chain.
 
-### Sample Output
+Bias Density per 1000 Reviews: Showing the bias density across cities for major hotel chains.
 
-```json
-{
-  "bias_flag": true,
-  "sentiment_score": -0.3,
-  "bias_risk_score": "high"
-}
-```
+# 6. Automation Pipeline
+An automation pipeline was developed to flag biased reviews based on predefined keywords and sentiment analysis. The pipeline assigns a bias risk score based on the sentiment and star rating of the review, categorizing them into high, medium, or low risk.
 
-This framework supports scalable moderation, flagging reviews for manual review or alerting teams to location-level risks.
+# Technologies Used
+Python: The primary programming language.
 
+Libraries: Pandas, Matplotlib, Seaborn, NLTK, TextBlob, BERTopic, Scikit-learn.
 
-## Ethical Reflections
+Jupyter Notebooks: For data analysis and visualization.
 
-While keyword-based detection is efficient, it may produce false positives. Real-time systems must combine sentiment, context, and human oversight. As fairness standards evolve, this system should be iteratively retrained to reflect societal shifts.
+# Key Insights
+Bias Detection: The project successfully flagged reviews containing bias-related keywords and identified significant differences in bias rates across major hotel chains and other businesses.
 
+Sentiment Analysis: Negative sentiment in reviews was strongly correlated with bias flags, revealing that customers with negative experiences often mention bias or unfair treatment.
 
-## Technologies Used
+Business Type and City Variations: The analysis highlighted variations in bias rates across different cities and types of hospitality businesses, which could inform future strategies for improving customer experiences in those areas.
 
-- **Python**
-- **Pandas, Matplotlib, Seaborn** for analysis and visualization
-- **TextBlob** for sentiment scoring
-- **Regex/NLP filtering** for bias keyword detection
+# Future Work and Enhancements
+Improved Bias Detection: Further enhancement of the bias keyword list by including more diverse and contextual terms, possibly using advanced techniques like Named Entity Recognition (NER) to capture bias at a deeper level.
 
+Ethical Considerations: It is essential to continually refine the bias detection methodology, ensuring that data does not stereotype back assumptions about bias.
+
+Automation and Real-Time Monitoring: Building a real-time bias detection system using NLP models, which can automatically flag and analyze reviews as they come in.
+
+Expansion of Analysis: The analysis will cover more cities, business categories, and a larger dataset, including international hospitality businesses.
+
+# Conclusion
+This project provides a practical framework for detecting bias and unfair treatment in hospitality reviews, with the potential to be expanded and refined further. By combining traditional text analysis methods with state-of-the-art NLP models, the framework offers a practical approach to addressing systemic bias in customer feedback and contributing to the broader mission of creating fairer experiences in the hospitality industry.
 
 ## Dataset
 
 - Source: [Yelp Open Dataset](https://business.yelp.com/data/resources/open-dataset/)
 - Cities Analyzed: Philadelphia, Tucson, Tampa, Indianapolis, New Orleans, Edmonton
 - Hospitality Reviews Processed: \~2.3M
-
-
-## Directory Structure
-.
-├── Fairness_Review_Analysis.ipynb      # Main analysis notebook
-├── figures/                            # Folder for saved graphs
-├── flagged_major_chains.csv            # CSV of reviews flagged from major hotel chains
-└── README.md                           # This file
-```
-
-
-## Next Steps
-
-- Incorporate Named Entity Recognition (NER) to refine bias categorization.
-- Expand to include more cities or international markets.
-- Develop a dashboard or alert system for businesses to monitor fairness signals in near real-time.
